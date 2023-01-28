@@ -36,9 +36,9 @@ class points:
 
     def setClassifier(self, classifier: str, front: bool):
         if front == True:
-            self.classifier = classifier + ": " + str(self.points)
+            self.classifier = [classifier + ": ", ""]
         else:
-            self.classifier = str(self.points) + classifier
+            self.classifier = ["", " " + classifier]
 
     def show(self):
         if self.classifier == None:
