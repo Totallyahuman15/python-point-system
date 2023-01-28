@@ -1,6 +1,6 @@
 from PointSystem import *
 
-set = points(0)
+set = points(0, classifier="Points", front=True)
 print(set.points)
 set.set(32)
 print(set.points)
@@ -13,4 +13,10 @@ print(set.points)
 set.round()
 print(set.points)
 set.float()
+print(set.points)
+set.reset()
+print(set.points)
+set.add(32)
+print(set.points)
+set.show()
 print(set.points)
