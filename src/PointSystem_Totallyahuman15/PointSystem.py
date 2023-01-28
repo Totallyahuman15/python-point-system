@@ -3,13 +3,22 @@ class points:
         self.points = tokenAmount
 
     def add(self, add: int):
-        self.points = self.add = self.points + add
+        self.points = self.points + add
 
     def sub(self, sub: int):
-        self.points = self.sub = self.points - sub
+        self.points = self.points - sub
 
     def mult(self, mult: int):
-        self.points = self.mult = self.points * mult
+        self.points = self.points * mult
 
     def div(self, div: int):
-        self.points = self.div = self.points / div
+        self.points = self.points / div
+
+    def set(self, amount: int = None):
+        self.points = amount
+
+    def round(self):
+        self.points = int(self.points)
+
+    def float(self):
+        self.points = float(self.points)

@@ -1,0 +1,16 @@
+from PointSystem import *
+
+set = points(0)
+print(set.points)
+set.set(32)
+print(set.points)
+set.div(2)
+print(set.points)
+set.set(56)
+print(set.points)
+set.div(3)
+print(set.points)
+set.round()
+print(set.points)
+set.float()
+print(set.points)
