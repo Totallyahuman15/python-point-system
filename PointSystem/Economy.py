@@ -32,3 +32,6 @@ class item():
             if time <= 0:
                 self.demand = x
                 self.price = round(self.demand * self.multiplier, 2)
+                self.supply -= self.demand
+                if self.supply <= -1:
+                    self. supply = 0

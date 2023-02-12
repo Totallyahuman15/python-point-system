@@ -1,6 +1,6 @@
 from PointSystem.Economy import item
 
-class points:
+class points():
     def __init__(self, tokenAmount: int, *,  classifier: str = None, front: bool = False):
         self.str = None
         self.points = tokenAmount
@@ -56,6 +56,7 @@ class points:
 
     def buy(self, BuyItem):
         if isinstance(BuyItem, item):
-            self.sub(BuyItem.price)
+            if BuyItem.supply >= 1:
+                self.sub(BuyItem.price)
         else:
             raise TypeError("Item is not a buyable item")
