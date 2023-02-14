@@ -35,3 +35,6 @@ class item():
                 self.supply -= self.demand
                 if self.supply <= -1:
                     self. supply = 0
+                asd = random.randint(1, 10)
+                if asd == 5:
+                    self.supply += int(self.demand / 2)
