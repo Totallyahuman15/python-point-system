@@ -59,4 +59,4 @@ class points():
             if BuyItem.supply >= 1:
                 self.sub(BuyItem.price)
         else:
-            raise TypeError("Item is not a buyable item")
+            raise TypeError("Item is not a buy-able item")

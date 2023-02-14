@@ -14,3 +14,4 @@ var2 = var.str
 print(var2)
 var.setClassifier(classifier="Points", front=False)
 var.show()
+print(var.points)
