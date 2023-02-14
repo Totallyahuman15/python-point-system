@@ -10,6 +10,8 @@ class item():
 
     def progress(self, time: int, *, popular: bool = 0):
         x = None
+        if popular != 0:
+            self.isPopular = popular
         while time > 0:
             if popular == 0:
                 if self.isPopular == True:

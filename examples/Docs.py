@@ -1,4 +1,4 @@
-from src.PointSystem_Totallyahuman15.PointSystem import *
+from PointSystem.Points import points
 
 var = points(0, classifier="Coins", front=True) #You can put any number here, this is the amount the variable starts with
 var.add(32)
@@ -14,4 +14,3 @@ var2 = var.str
 print(var2)
 var.setClassifier(classifier="Points", front=False)
 var.show()
-
