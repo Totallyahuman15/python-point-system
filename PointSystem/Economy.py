@@ -10,8 +10,6 @@ class item():
 
     def progress(self, time: int, *, popular: bool = 0):
         x = None
-        if popular != 0:
-            self.isPopular = popular
         while time > 0:
             if popular == 0:
                 if self.isPopular == True:
@@ -23,13 +21,16 @@ class item():
                 else:
                     pass
             elif popular == True:
+                self.isPopular = popular
                 x = random.randint(self.demand + 10, self.demand + 30)
             elif popular == None:
+                self.isPopular = popular
                 x = random.randint(self.demand - 5, self.demand + 5)
             elif popular == False:
+                self.isPopular = popular
                 x = random.randint(self.demand - 30, self.demand - 10)
             else:
-                raise ("Error!")
+                raise TypeError("The popular argument should either be True, None, or False")
             time -= 1
             if time <= 0:
                 self.demand = x
