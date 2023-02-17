@@ -1,12 +1,13 @@
 import random
 class item():
 
-    def __init__(self, demand: int, price: float, supply: int, popular: bool = None):
+    def __init__(self, demand: int, price: float, supply: int, name: str, *, popular: bool = None):
         self.demand = demand
         self.price = price
         self.supply = supply
         self.multiplier = self.price / self.demand
         self.isPopular = popular
+        self.name = name
 
     def progress(self, time: int, *, popular: bool = 0):
         x = None

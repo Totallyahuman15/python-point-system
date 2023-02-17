@@ -4,6 +4,7 @@ class points():
     def __init__(self, tokenAmount: int, *,  classifier: str = None, front: bool = False):
         self.str = None
         self.points = tokenAmount
+        self.items = []
         if classifier == None:
             self.classifier = None
         else:
@@ -58,5 +59,7 @@ class points():
         if isinstance(BuyItem, item):
             if BuyItem.supply >= 1:
                 self.sub(BuyItem.price)
+                self.items.append(BuyItem.name)
+                BuyItem.supply -= 1
         else:
-            raise TypeError("Item is not a buy-able item")
+            raise TypeError("Item is not a 'item()' class")
