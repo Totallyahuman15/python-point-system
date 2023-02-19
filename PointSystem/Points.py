@@ -61,5 +61,6 @@ class points():
                 self.sub(BuyItem.price)
                 self.items.append(BuyItem.name)
                 BuyItem.supply -= 1
+                self.points = self.points.__round__(2)
         else:
             raise TypeError("Item is not a 'item()' class")
