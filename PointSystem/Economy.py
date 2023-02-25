@@ -1,7 +1,10 @@
 import random
-class item():
+from PointSystem.KeepRefs import KeepRefs
+
+class item(KeepRefs):
 
     def __init__(self, demand: int, price: float, supply: int, name: str, *, popular: bool = None):
+        super(item, self).__init__()
         self.demand = demand
         self.price = price
         self.supply = supply
@@ -31,7 +34,7 @@ class item():
                 self.isPopular = popular
                 x = random.randint(self.demand - 30, self.demand - 10)
             else:
-                raise TypeError("The popular argument should either be True, None, or False")
+                raise TypeError("The popular argument is optional, but its value should either be True, None, or False. See this page for more info: https://github.com/Totallyahuman15/point-system/wiki/How-to-use:-Economy#the-progress-function")
             time -= 1
             if time <= 0:
                 self.demand = x
@@ -42,3 +45,7 @@ class item():
                 asd = random.randint(1, 10)
                 if asd == 5:
                     self.supply += int(self.demand / 2)
+
+def econ_progress(time: int = 1):
+    for i in item.get_instances():
+        i.progress(time=time)

@@ -63,4 +63,4 @@ class points():
                 BuyItem.supply -= 1
                 self.points = self.points.__round__(2)
         else:
-            raise TypeError("Item is not a 'item()' class")
+            raise TypeError("Item is not a 'item()' class. See this page for more info: https://github.com/Totallyahuman15/point-system/wiki/How-to-use:-Economy#the-buy-function")
